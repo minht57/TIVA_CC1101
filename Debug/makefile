@@ -125,33 +125,33 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-TIVA_CC1101.out \
+TIVA_CC1101_UART.out \
 
 EXE_OUTPUTS__QUOTED += \
-"TIVA_CC1101.out" \
+"TIVA_CC1101_UART.out" \
 
 BIN_OUTPUTS += \
-TIVA_CC1101.hex \
+TIVA_CC1101_UART.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"TIVA_CC1101.hex" \
+"TIVA_CC1101_UART.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "TIVA_CC1101.out"
+	@$(MAKE) --no-print-directory -Onone "TIVA_CC1101_UART.out"
 
 # Tool invocations
-TIVA_CC1101.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+TIVA_CC1101_UART.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TIVA_CC1101.map" --heap_size=0 --stack_size=512 -i"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/lib" -i"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TIVA_CC1101_linkInfo.xml" --rom_model -o "TIVA_CC1101.out" $(ORDERED_OBJS)
+	"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"TIVA_CC1101_UART.map" --heap_size=0 --stack_size=512 -i"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/lib" -i"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TIVA_CC1101_UART_linkInfo.xml" --rom_model -o "TIVA_CC1101_UART.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-TIVA_CC1101.hex: $(EXE_OUTPUTS)
+TIVA_CC1101_UART.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armhex"  -o "TIVA_CC1101.hex" $(EXE_OUTPUTS__QUOTED)
+	"D:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.0.LTS/bin/armhex"  -o "TIVA_CC1101_UART.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
