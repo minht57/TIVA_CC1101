@@ -109,7 +109,7 @@ Test with echo program:
           SysCtlDelay(SysCtlClockGet()/30);
        }
 
-![](https://sv1.uphinhnhanh.com/images/2018/06/21/image.png)
+![](http://sv1.upsieutoc.com/2018/06/21/image53b76e652d4649e8.png)
 
 Data is received and resent to terminal successfully.
 
