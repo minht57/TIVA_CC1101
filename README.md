@@ -45,7 +45,7 @@ Connect CC1101 to USB-TTL (CP2102), make RF entering AT mode.
  Two RF must have the same channel, address, channel and non must be 0.
 
  Using these command:
-1.	AT : test the mode, exp: will reply OK if correct.
+1.	AT : test the mode, reply OK if correct.
 2.	AT+Axxx: change module address, from 000-255.
 3.	AT+Bxxxx: change baud rate, can be set to:  2400, 4800, 9600, 115200, 19200, 38400, 57600. Default is 9600.
 4.	AT+Cxxx: change channel, from 001 to 127. Default is 001 (suggest to use 1 ~ 100 for stable performance).
