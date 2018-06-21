@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-The objective of this project was to send and receive data between MCU and MCU, computer and computer or MCU and computer with no wire. This project  focuses on setting modules and config MCU to comunicate between MCU and CC1101 using buffer to store data. 
+The objective of this project was to send and receive data between MCU and MCU, computer and computer or MCU and computer without wire. This project  focused on setting modules and config MCU to communicate between MCU and CC1101 using buffer to store data. 
 
 ## **Dependent**
 
@@ -36,21 +36,21 @@ Connect CC1101 to USB-TTL (CP2102), make RF entering AT mode.
 
 
         
- Checking driver software in Device Manager (Window + X and press M), if missing, get driver at [here](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).
+ Check driver software in Device Manager (Window + X and press M), if missing, get driver at [here](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).
         
- Open [Hercules](https://www.hw-group.com/software/hercules-setup-utility) and setting up as the picture below. Note: Serial name can get in Device Manager.
+ Open [Hercules](https://www.hw-group.com/software/hercules-setup-utility) and set up as the picture below. Note: Serial name can get in Device Manager.
 
  ![](https://sv1.uphinhnhanh.com/images/2018/06/20/image8aaac.png)
 
- Two RF must have the same channel, address, channel and non must be 0.
+ Two RFs must have the same channel, address and non must be 0.
 
- Using these command:
+ Use these command:
 1.	AT : test the mode, reply OK if correct.
 2.	AT+Axxx: change module address, from 000-255.
 3.	AT+Bxxxx: change baud rate, can be set to:  2400, 4800, 9600, 115200, 19200, 38400, 57600. Default is 9600.
 4.	AT+Cxxx: change channel, from 001 to 127. Default is 001 (suggest to use 1 ~ 100 for stable performance).
 5.	AT+Px: set wireless power, x is from 1 to 8, base on distance. Default is 8
-6.	AT+Rx: show all parameter setting.
+6.	AT+Rx: show all parameter settings.
    For more information, download [datasheet](https://github.com/PIFClub/TIVAC123_CC1101/tree/master/TIVA_CC1101_UART/~Docs).
 
 ### B.	Setting TivaC
@@ -60,7 +60,7 @@ Connect CC1101 to USB-TTL (CP2102), make RF entering AT mode.
 
 
 Download source code.
-Creating new project and move necessary files because not matching location of Tivaware driverlib and compiler can make some issues.
+Import code to CCS. I suggest creating new project and moving necessary files because not matching location of Tivaware driverlib can make some issues.
 
  Connect TivaC and RF carefully and connect TivaC to computer.
 ## ## 
@@ -121,7 +121,7 @@ If you failed, you could check some things below:
 
  •	Code has no bug and correct baudrate with RFs.
 
- •	Your lucky :D 
+ •	Your luck :D 
 
 
 	
